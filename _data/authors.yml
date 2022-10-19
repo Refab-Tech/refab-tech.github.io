@@ -1,0 +1,30 @@
+# Authors
+skuodi:
+  name             : "skuodi"
+  avatar           : /assets/images/skuodi.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Open Arms. Open Heart. Open Mind."
+  location         : "(l,b) ≈ (207°, -57°)"
+  email            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://refab.tech"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      #url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      #url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/skuodi"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/skuodi"
+
