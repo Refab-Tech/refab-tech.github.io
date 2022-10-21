@@ -189,9 +189,8 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-
 # Site Author
-author:
+skuodi:
   name             : "skuodi"
   avatar           : /assets/images/skuodi.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Open Arms. Open Heart. Open Mind."
@@ -201,25 +200,18 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
-    - label: "Website"
+    - label: "All links"
       icon: "fas fa-fw fa-link"
-      url: "https://skuodi.github.io"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      #url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/"
+      url: "https://linktr.ee/refab_tech"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/skuodi"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      # url: "https://instagram.com/"
     - label: "Telegram"
       icon: "fab fa-fw fa-telegram"
-      url: "https://instagram.com/"
-
+      url: "https://t.me/skuodi"
 
 # Site Footer
 footer:
