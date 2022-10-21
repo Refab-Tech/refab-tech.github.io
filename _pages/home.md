@@ -12,10 +12,10 @@ header:
       url: "/"
 excerpt: 'Creating open access to electronics hardware development one pwned gadget at a time.'
 intro: 
-  - excerpt: 'In conventional electronic scrap recycling, PCBs are ground to dust, along with all the information encoded within them. If, however, prior to recycling, electronic devices are meticulously disassembled in a learning environment and the parts & knowledge used to build new devices, the students of this practice get to learn from the gold standard of electronics design. This is **The Art Of ReFab**. <br> Join The ReFab movement to see how you can contribute.'
+  - excerpt: 'In conventional electronic scrap recycling, PCBs are ground to dust, along with all the information encoded within them. If, however, prior to recycling, electronic devices are meticulously disassembled in a learning environment and the parts & knowledge used to build new devices, the students of this practice get to learn from the gold standard of electronics design. This is **The Art Of ReFab**.
 
 feature_row:
-  - image_path: assets/images/refab.jpg
+  - image_path: assets/images/key.jpg
     alt: "the art of ReFab image"
     title: "The Art of ReFab"
     excerpt: 'ReFab is more just a skill, it is a way of life. Explore the ReFab school of thought with respect to life in general.'
