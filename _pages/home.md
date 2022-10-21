@@ -37,7 +37,7 @@ feature_row2:
     alt: "the refab gallery image"
     title: "The ReFab Museum"
     excerpt: 'Check out our collection of the fascinating electronics from history, curated along our salvaging journey.'
-    url: "gallery"
+    url: "museum"
     btn_label: "View Gallery"
     btn_class: "btn--success"
 feature_row3:
