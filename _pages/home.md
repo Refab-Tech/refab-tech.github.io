@@ -7,9 +7,9 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/landing.jpg
   image_caption: "A Salvaged Intel 8031 MCU"
-  actions:
+<!--   actions:
     - label: "Learn More"
-      url: "/"
+      url: "/" -->
 excerpt: 'Creating open access to electronics hardware development one pwned gadget at a time.'
 intro: 
   - excerpt: 'In conventional electronic scrap recycling, PCBs are ground to dust, along with all the information encoded within them. If, however, prior to recycling, electronic devices are meticulously disassembled in a learning environment and the parts & knowledge used to build new devices, the students of this practice get to learn from the gold standard of electronics design. This is **The Art Of ReFab**.'
