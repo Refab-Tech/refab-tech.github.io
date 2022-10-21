@@ -15,17 +15,17 @@ intro:
   - excerpt: 'In conventional electronic scrap recycling, PCBs are ground to dust, along with all the information encoded within them. If, however, prior to recycling, electronic devices are meticulously disassembled in a learning environment and the parts & knowledge used to build new devices, the students of this practice get to learn from the gold standard of electronics design. This is **The Art Of ReFab**.'
 
 feature_row:
-  - image_path: assets/images/key.jpg
-    alt: "the art of ReFab image"
-    title: "The Art of ReFab"
-    excerpt: 'ReFab is more just a skill, it is a way of life. Explore the ReFab school of thought with respect to life in general.'
-    url: "#"
-    btn_label: "Coming Soon"
-    btn_class: "btn--primary"
   - image_path: /assets/images/hack1.jpg
     alt: "the refab blog image"
     title: "ReFab Blog"
     excerpt: 'Ground-up tutorials on how to get started with the ReFab lifestyle.'
+    url: "year-archive"
+    btn_label: "Read More"
+    btn_class: "btn--success"
+  - image_path: assets/images/key.jpg
+    alt: "the art of ReFab image"
+    title: "The Art of ReFab"
+    excerpt: 'ReFab is more just a skill, it is a way of life. Explore the ReFab school of thought with respect to life in general.'
     url: "#"
     btn_label: "Coming Soon"
     btn_class: "btn--primary"
@@ -36,13 +36,13 @@ feature_row:
     btn_label: "Coming Soon"
     btn_class: "btn--primary"
 feature_row2:
-  - image_path: /assets/images/8031.jpg
+  - image_path: /assets/images/gallery.jpg
     alt: "the refab gallery image"
     title: "The ReFab Museum"
     excerpt: 'Check out our collection of the fascinating electronics from history, curated along our salvaging journey.'
-    url: "#"
-    btn_label: "Coming Soon"
-    btn_class: "btn--primary"
+    url: "gallery"
+    btn_label: "View Gallery"
+    btn_class: "btn--success"
 feature_row3:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
