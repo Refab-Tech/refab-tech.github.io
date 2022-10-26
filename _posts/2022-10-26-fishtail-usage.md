@@ -44,25 +44,25 @@ tui2:
   - url: /assets/images/FishTail_Usage_TUI2.png
     image_path: /assets/images/FishTail_Usage_TUI2.png
     alt: "tui split layout with the register window populated"
-    title: "tui split layout with the register window populated"
+    title: "TUI split layout with the register window populated"
 tui3:
   - url: /assets/images/FishTail_Usage_TUI3.png
     image_path: /assets/images/FishTail_Usage_TUI3.png
-    alt: "tui split layout"
-    title: "TUI Split Layout"
+    alt: "tui asm layout"
+    title: "TUI asm Layout"
   - url: /assets/images/FishTail_Usage_TUI4.png
     image_path: /assets/images/FishTail_Usage_TUI4.png
-    alt: "tui split layout with the register window populated"
-    title: "tui split layout with the register window populated"
+    alt: "tui asm Split Layout"
+    title: "TUI asm split layout"
   - url: /assets/images/FishTail_Usage_TUI5.png
     image_path: /assets/images/FishTail_Usage_TUI5.png
-    alt: "tui split layout with the register window populated"
-    title: "tui split layout with the register window populated"
+    title: "tui asm split layout with the register window populated"
+    title: "TUI asm split layout with the register window populated"
 tui4:
   - url: /assets/images/FishTail_Usage_TUI5.png
     image_path: /assets/images/FishTail_Usage_TUI5.png
     alt: "tui split layout with assembly and register view"
-    title: "tui split layout with assembly and register view"
+    title: "TUI split layout with assembly and register view"
   - url: /assets/images/FishTail_Usage_TUI6.png
     image_path: /assets/images/FishTail_Usage_TUI6.png
     alt: "tui split layout with register view and assembly view resized"
@@ -70,7 +70,7 @@ tui4:
 
 ---
 This is a follow up guide to [Part 1](https://refab.tech/fishtail) where we went through the process of building our wireless ARM debug probe: FishTail.
-In part 2, we take a look how to make use of the FishTail probe to debug ARM targets from the comfort of 
+In part 2, we take a look how to make use of the FishTail probe to debug ARM targets using the GNU Debug Bridge (GDB) 
 
 ## Definition of terms
 Before getting our hands dirty, there are a few key terms we need to get out of the way:
@@ -126,10 +126,11 @@ sudo apt-get install gcc-arm-none-eabi gdb-multiarch -y
   - If configured as an access point, connect to the wi-fi access point created by your probe.
 
 So Far you should have the following file structure in your current working directory(MyProject):
+```
 MyProject
 |- flash.gdb
 |- myfirmware.elf
-
+```
 Enter the following command to upload code to your target:
 On Windows
 ```bash
@@ -139,7 +140,6 @@ On Linux
 ```bash
 gdb-multiarch --command=flash.gdb myfirmware.elf
 ```
-  where `myfirmware.elf` is the location of the firmware you want to flash
 
 You should get output similar to the following
 
@@ -174,8 +174,8 @@ Transfer rate: 1 KB/sec, 400 bytes/write.
 [Inferior 1 (Remote target) detached]
 
 ```
-It seems like a lot of information but it is quite simple if you look into it.
-First, GDB prints its license information along with its specific version number.
+It seems like a lot of information but let us look through it line by line.
+First, GDB prints its license information along with its version number.
 
 ```bash
 GNU gdb (Arm GNU Toolchain 11.3.Rel1) 12.1.90.20220802-git
@@ -194,6 +194,8 @@ Type "show configuration" for configuration details.
 ```
 {% capture notice-1 %}
 
+<h4>Helpful:</h4>
+
 We are using the arm-none-eabi version of gdb: `arm-none-eabi-gdb` so only one target architecture is supported. However, `gdb-multiarch` supports multiple target architectures which can either be determined from the `.elf` file or overridden manually after running gdb using the `set architecture` command.
 To view the current target and host configuration as well as other information, enter the gdb command `show configuration`
 
@@ -211,7 +213,7 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 ```
-Then the actual process of loading firmware into the different memory locations on the target:
+Then the actual process of loading firmware onto the target:
 
 ```bash
 Reading symbols from myfirmware.elf...
@@ -259,7 +261,7 @@ Exec file: `\path\to\firmware\myfirmware.elf', file type elf32-littlearm.
 ```
 
 ### Timewalking
-The most important usage of gdb is in controlling and monitoring the target program and the effect it has on the target computer resources. I call it timewalking as you can, relatively, pause time for the target while you are at it and step through the code line by line at your leisure.
+The most important usage of gdb is in controlling and monitoring the target program and the effect it has on the target computer resources. I call it timewalking as you can, relatively, stop the progression time for the target while you are at it and resume it to step through the code line by line at your leisure.
 With your computer still connected to the FishTail via wi-fi, run gdb with your firmware as an input file.
 
 ```bash
@@ -312,6 +314,8 @@ No breakpoints or watchpoints.
 ````
 
 {% capture notice-2 %}
+
+<h4>Helpful</h4>
 
 A keen eye will notice that instead of typing out the entire command, it is also valid to use the first few letters and gdb will interpret the command just fine. You can use just the first letter, but that would be ambiguous as there may be multiple commands that start the same way. Nonetheless, I believe gdb evaluates them in alphabetical order so the first command alphabetically would take the cake here.
 
@@ -475,9 +479,7 @@ Breakpoint 1, main () at Core/Src/main.c:64
 (gdb) watch x
 Watchpoint 2: x
 (gdb) n
-
 Watchpoint 2: x
-
 Old value = 1
 New value = 0
 main () at Core/Src/main.c:101
@@ -488,9 +490,23 @@ main () at Core/Src/main.c:101
 Here, after loading the new firmware and setting a breakpoint at `main`, we use `run` to run the target program from the beginning and step through it line by line using `next`  then we set a watchpoint for the variable `x` . 
 When we execute the next line (line 100) the value of x changes and gdb reports the change as well as the old and new values of the variable
 
+```
+(gdb) n
+100         x ^= 1;
+(gdb) watch x
+Watchpoint 2: x
+(gdb) n
+Watchpoint 2: x
+Old value = 1
+New value = 0
+main () at Core/Src/main.c:101
+101         HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13,x);
+(gdb)
+```
+
 #### TUI
 GDB offers a text user interface (TUI) that presents all the above information very conveniently. It is not available on the official Windows version of `arm-none-eabi-gdb` but is available in the xpack-dev-tools version for on Linux.
-As usual, start by setting the target, loading firmware, setting a breakpoint and running the code from the beginning. Then launch the TUI with `tui enable`
+As usual, start by setting the target, loading firmware, setting a breakpoint and running the code from the beginning. Then launch the TUI with `tui enable`.
 
 
 ```bash
