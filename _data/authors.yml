@@ -22,3 +22,25 @@ skuodi:
       icon: "fab fa-fw fa-telegram"
       url: "https://t.me/skuodi"
 
+Victoria Sitati:
+  name             : "Victoria Sitati"
+  avatar           : /assets/images/bio-photo.jpg
+  bio              : 
+  location         : 
+  email            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "All links"
+      icon: "fas fa-fw fa-link"
+#       url: "https://linktr.ee/ "
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+#       url: "https://github.com/ "
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+#       url: "https://t.me/ "
