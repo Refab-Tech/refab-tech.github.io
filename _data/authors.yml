@@ -25,7 +25,7 @@ skuodi:
 Victoria Sitati:
   name             : "Victoria Sitati"
   avatar           : /assets/images/victoria.jpg
-  bio              : ". . ."
+  bio              : "nerd"
   location         : 
   email            :
   links:
@@ -33,7 +33,7 @@ Victoria Sitati:
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
+      icon: "fas fa-fw fa-link"
       url: "https://www.linkedin.com/in/victoria-sitati-866302206"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
