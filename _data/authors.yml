@@ -24,20 +24,20 @@ skuodi:
 
 Victoria Sitati:
   name             : "Victoria Sitati"
-  avatar           : /assets/images/bio-photo.jpg
-  bio              : 
+  avatar           : /assets/images/victoria.jpg
+  bio              : ". . ."
   location         : 
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
-    - label: "All links"
-      icon: "fas fa-fw fa-link"
-#       url: "https://linktr.ee/ "
+    - label: "LinkedIn"
+      icon: "fas fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/victoria-sitati-866302206"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-#       url: "https://github.com/ "
+      url: "https://github.com/victoriasitati"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
