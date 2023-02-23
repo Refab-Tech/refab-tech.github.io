@@ -90,7 +90,7 @@ For the more goal-oriented among us, I\'ve already implemented the SMBus and Sma
 
 ![SBS_SMB stack]({{ site.url }}{{ site.baseurl }}/assets/images/smart_battery_stack.png "SBS_SMB stack")
 
-The library is written for AVR but 
+The library is written for AVR but can easily be [ported](https://wikipedia.org/wiki/Porting) to your preferred platform. Porting instructions are in the [readme in the repo](https://github.com/skuodi/sbs_smb#porting).
 
 To get started with the software:
 
