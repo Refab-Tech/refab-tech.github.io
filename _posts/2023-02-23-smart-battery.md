@@ -1,7 +1,7 @@
 ---
 
 author : skuodi
-title: "\'Powerful\' Interrogation: Getting a Smart Battery to spill the beans"
+title: "Powerful Interrogation: Getting a Smart Battery to spill the beans"
 comments : true
 toc: true
 toc_sticky: true
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-# \'Powerful\' Interrogation: Getting a Smart Battery to spill the beans
+# Powerful Interrogation: Getting a Smart Battery to spill the beans
 
 The battery in your smartphone or laptop knows a lot more about itself than we might have imagined, thanks to a tiny chip embedded inside the battery that monitors and records the state of the battery for the duration of the battery\'s lifetime. We might not be conducting any blacksite operations today but we\'ll be having a one-on-one conversation with a laptop battery to find out about it\'s life experience.
 
@@ -49,7 +49,7 @@ The [Smart Battery System](https://en.wikipedia.org/wiki/Smart_Battery_System)(S
 The microcontroller on a Smart Battery solves all these issues by keeping track of battery state and reporting said state to the host device. The latest Smart Battery specification can be found at the [Smart Battery System Implementers Forum website](http://www.sbs-forum.org/specs/).
 
 ## Let the interrogation begin!
-Prerequisite to communication with the Smart Battery, or to any communication for that matter, we must understand the protocol that the Smart Battery speaks; only then we can we understand what we are required to do on our end. Actual electrical communication with a Smart Battery is built upon the [System Management Bus (SMBus) standard](https://wikipedia.org/wiki/System_Management_Bus) which is defined in [it\'s own specification](http://www.smbus.org/specs/spec_content.htm#Updates). SMBus is, in turn, an extension of the very popular [I2C standard](https://wikipedia.org/wiki/I%C2%B2C), also defined in [it\'s own standard](https://www.i2c-bus.org/specification/). It might be pretty far down a rabbit hole but this is good news for us; microcontrollers like the Arduino Uno have built-in I2C communication hardware which if we build upon, we'll be able to communicate with the Smart Battery. 
+Prerequisite to communication with the Smart Battery, or to any communication for that matter, we must understand the protocol that the Smart Battery speaks; only then we can we understand what we are required to do on our end. Actual electrical communication with a Smart Battery is built upon the [System Management Bus (SMBus) standard](https://wikipedia.org/wiki/System_Management_Bus) which is defined in [it\'s own specification](http://www.smbus.org/specs/spec_content.htm#Updates). SMBus is, in turn, an extension of the very popular [I2C standard](https://wikipedia.org/wiki/I%C2%B2C), also defined in [it\'s own standard](https://www.i2c-bus.org/specification/). It might be pretty far down a rabbit hole but this is good news for us; microcontrollers like the Arduino Uno have built-in I2C communication hardware which if we build upon, we\'ll be able to communicate with the Smart Battery. 
 Feel free to look through the [I2C spec](https://community.nxp.com/pwmxy87654/attachments/pwmxy87654/nxp-designs/931/1/UM10204.pdf), [SMBus spec](http://www.smbus.org/specs/SMBus_3_2_20220112.pdf) and [Smart Battery spec](http://www.sbs-forum.org/specs/sbdat110.pdf) and try to implement it on an Arduino (or more advanced) board, hopefully in a more efficient way than I have.
 
 ### Hardware Setup
@@ -59,7 +59,7 @@ We\'ll need the following:
 	- I tested it on an Arduino Pro Micro but it should work on Uno, Mega, Nano, Due and Leonardo as well with simple change of pinout
 
 2. Smart Battery e.g laptop battery that\'s functional. 
-	- It's possible to communicate with one that\'s depleted but that\'s beyond the scope of this tutorial
+	- It\'s possible to communicate with one that\'s depleted but that\'s beyond the scope of this tutorial
 3. 2 x 1K Ohm resistors
 4. Breadboard
 5. Jumper wires
