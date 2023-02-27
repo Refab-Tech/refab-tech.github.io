@@ -9,6 +9,44 @@ header:
   teaser: /assets/images/smart_battery_teaser.jpg
 tags:
     - Hacks
+gallery:
+    - url: /assets/images/smart_battery_hardware.jpg
+      image_path: /assets/images/smart_battery_hardware.jpg
+      alt: "smart battery from laptop" 
+      title: "Smart Battery terminals. The P+ and P- are labelled"
+    - url: /assets/images/smart_battery_hardware1.jpg
+      image_path: /assets/images/smart_battery_hardware1.jpg
+      alt: "laptop battery" 
+      title: "Smart Battery from laptop" 
+    - url: /assets/images/smart_battery_hardware2.jpg
+      image_path: /assets/images/smart_battery_hardware2.jpg
+      alt: "breadboard connection" 
+      title: "Smart Battery breadboard connection" 
+    - url: /assets/images/smart_battery_hardware3.jpg
+      image_path: /assets/images/smart_battery_hardware3.jpg
+      alt: "breadboard connection" 
+      title: "Smart Battery breadboard connection" 
+    - url: /assets/images/smart_battery_hardware4.jpg
+      image_path: /assets/images/smart_battery_hardware4.jpg
+      alt: "breadboard connection" 
+      title: "Smart Battery breadboard connection" 
+gallery1:
+    - url: /assets/images/smart_battery_result.png
+      image_path: /assets/images/smart_battery_result.png
+      alt: "arduino serial monitor output showing printed values from the smart battery" 
+      title: "Arduino serial monitor output"
+    - url: /assets/images/smart_battery_result1.png
+      image_path: /assets/images/smart_battery_result1.png
+      alt: "logic analyser output showing values from the smart battery" 
+      title: "Logic analyser output"
+    - url: /assets/images/smart_battery_result2.png
+      image_path: /assets/images/smart_battery_result2.png
+      alt: "arduino serial monitor output side by side with logic analyser output" 
+      title: "Serial monitor vs logic analyser output"
+    - url: /assets/images/smart_battery_result3.png
+      image_path: /assets/images/smart_battery_result3.png
+      alt: "logic analyser output showing printed values from the smart battery in hexadecimal format" 
+      title: "Querying the device chemistry"
 
 ---
 
@@ -65,6 +103,8 @@ We\'ll need the following:
 5. Jumper wires
 6. Breadboard power supply, for the microcontroller.
 
+{% include gallery id="gallery" caption="Hardware Setup" %}
+
 Connect them as follows:
 - Arduino SDA pin to Smart Battery DAT pin and through a 1k resistor to +5V
 - Arduino SCL pin to Smart Battery CLK pin and through a 1k resistor to +5V
@@ -78,6 +118,16 @@ Connect them as follows:
 Finding the _DAT_ and _CLK_ pin is more a game of reial and error. Below is  a labelled circuit board I extracted from an old battery. I\'ve found this pinout works for HP laptop batteries.
 
 ![HP Battery Pinout]({{ site.url }}{{ site.baseurl }}/assets/images/smart_battery_teaser.jpg "HP Battery Pinout")
+
+
+| PCB Marking  | Pin Name | Description |
+|------------|-------------|--------|
+| P+  | Battery + | Battery power input/output terminal. Usually 2 pins |
+| SMC | SMB_CLK   | SMBus Clock pin |
+| SMD | SMB_DAT   | SMBus Data pin |
+| RTC | SMB_T Pin | SMBus thermistor alert pin|
+| BI  |	Battery Inserted/System present| Used to detect that the battery has been connected to a system |
+| P-  | Battery - | Battery power/communication reference ground. Usually 2 pins |
 
 
 ### Software setup
@@ -105,9 +155,15 @@ To get started with the software:
 
 The example asks the Smart Battery for its voltage, state of charge(%), remaining capacity, cycle count(number of times it\'s been charged and discharged) and date of manufacture.
 
-
-[image]
+{% include gallery id="gallery1" caption="The gist of the conversation" %}
 
 ## Conclusion
 
 Modern portable devices have high power requirements supplied by lithium cells which need to be handled with care and thus many have a microcontroller embedded inide them that monitors and reports the state of the battery. The journey to learning how to communicate with this microcontroller has revealed a whole new world of standards and specifications that help us understand the electronic world around us.
+
+## References
+
+1. [I2C spec](https://community.nxp.com/pwmxy87654/attachments/pwmxy87654/nxp-designs/931/1/UM10204.pdf)
+2. [SMBus spec](http://www.smbus.org/specs/SMBus_3_2_20220112.pdf)
+3. [Smart Battery spec](http://www.sbs-forum.org/specs/sbdat110.pdf) 
+4. [ATMEGA32U4 Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Summary.pdf)
