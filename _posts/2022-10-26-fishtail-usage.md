@@ -22,22 +22,22 @@ requirements:
     # title: "FishTail Probe"
     
 fishtail3:
-  - url: /assets/images/FishTail_v3.753_Bottom.jpg
-    image_path: /assets/FishTail_v3.753_Bottom.jpg
+  - url: /assets/images/FishTail_v3_753_Bottom.jpg
+    image_path: /assets/FishTail_v3_753_Bottom.jpg
     alt: "requirements -  fishtail_v3.753"
     title: "FishTailv3.753"
-  - url: /assets/images/FishTail_v3.753_Top.jpg
-    image_path: /assets/FishTail_v3.753_Top.jpg
+  - url: /assets/images/FishTail_v3_753_Top.jpg
+    image_path: /assets/FishTail_v3_753_Top.jpg
     alt: "requirements -  fishtail_v3.753"
     title: "FishTailv3.753"
 
 connection0:
-  - url: /assets/images/FishTail_v3.753_Connection.jpg
-    image_path: /assets/FishTail_v3.753_Connection.jpg
+  - url: /assets/images/FishTail_v3_753_Connection.jpg
+    image_path: /assets/FishTail_v3_753_Connection.jpg
     alt: "hardware connection"
     title: "STM32401 Mini Connection"
-  - url: /assets/images/FishTail_v3.753_Pinout.jpg
-    image_path: /assets/FishTail_v3.753_Pinout.jpg
+  - url: /assets/images/FishTail_v3_753_Pinout.jpg
+    image_path: /assets/FishTail_v3_753_Pinout.jpg
     alt: "hardware connection"
     title: "FishTail v3.753 Pinout"
     
