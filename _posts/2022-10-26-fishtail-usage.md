@@ -24,20 +24,20 @@ fishtail3:
   - url: /assets/images/FishTail_v3_753_Bottom.jpg
     image_path: /assets/FishTail_v3_753_Bottom.jpg
     alt: "requirements -  fishtail_v3_753"
-    title: "FishTailv3_753"
+    # title: "FishTailv3_753"
   - url: /assets/images/FishTail_v3_753_Top.jpg
     image_path: /assets/FishTail_v3_753_Top.jpg
     alt: "requirements -  fishtail_v3_753"
-    title: "FishTail_v3_753"
+    # title: "FishTail_v3_753"
 connection0:
   - url: /assets/images/FishTail_v3_753_Connection.jpg
     image_path: /assets/FishTail_v3_753_Connection.jpg
     alt: "hardware connection"
-    title: "STM32401 Mini Connection"
+    # title: "STM32401 Mini Connection"
   - url: /assets/images/FishTail_v3_753_Pinout.jpg
     image_path: /assets/FishTail_v3_753_Pinout.jpg
     alt: "hardware connection"
-    title: "FishTail v3_753 Pinout"
+    # title: "FishTail v3_753 Pinout"
 connection:
   - url: /assets/images/FishTail_Usage_Connection.jpg
     image_path: /assets/images/FishTail_Usage_Connection.jpg
