@@ -20,17 +20,15 @@ requirements:
     image_path: /assets/images/FishTail_Usage_Requirements2.jpg
     alt: "requirements - fishtail probe"
     # title: "FishTail Probe"
-    
 fishtail3:
   - url: /assets/images/FishTail_v3_753_Bottom.jpg
     image_path: /assets/FishTail_v3_753_Bottom.jpg
-    alt: "requirements -  fishtail_v3.753"
-    title: "FishTailv3.753"
+    alt: "requirements -  fishtail_v3_753"
+    title: "FishTailv3_753"
   - url: /assets/images/FishTail_v3_753_Top.jpg
     image_path: /assets/FishTail_v3_753_Top.jpg
-    alt: "requirements -  fishtail_v3.753"
-    title: "FishTailv3.753"
-
+    alt: "requirements -  fishtail_v3_753"
+    title: "FishTail_v3_753"
 connection0:
   - url: /assets/images/FishTail_v3_753_Connection.jpg
     image_path: /assets/FishTail_v3_753_Connection.jpg
@@ -39,8 +37,7 @@ connection0:
   - url: /assets/images/FishTail_v3_753_Pinout.jpg
     image_path: /assets/FishTail_v3_753_Pinout.jpg
     alt: "hardware connection"
-    title: "FishTail v3.753 Pinout"
-    
+    title: "FishTail v3_753 Pinout"
 connection:
   - url: /assets/images/FishTail_Usage_Connection.jpg
     image_path: /assets/images/FishTail_Usage_Connection.jpg
@@ -109,17 +106,17 @@ Before getting our hands dirty, there are a few key terms we need to get out of 
   - You can use USB for this if your dev board features a USB port
 
 
-{% capture notice-0 %}
+{% capture notice-00 %}
 
 <h4>Edit - 27/03/2022:</h4>
 
-FishTail Probe v3.753 is out! Better Hardware, good old functionality
+FishTail Probe v3_753 is out! Better Hardware, good old functionality.
 
-{% include gallery id="fishtail3" caption="Use FishTail_v3.753 instead." %}
+{% include gallery id="fishtail3" caption="Use FishTail_v3_753 instead." %}
 
 {% endcapture %}
 
-<div class="notice--info">{{ notice-0 | markdownify }}</div>
+<div class="notice--info">{{ notice-00 | markdownify }}</div>
 
 ## Software
 ### Installing the Debugger
@@ -140,7 +137,7 @@ sudo apt-get install gcc-arm-none-eabi gdb-multiarch -y
 
 {% include gallery id="connection" caption="Hardware Configuration" %}
 
-{% include gallery id="connection0" caption="Hardware Configuration for FishTail v3.753" %}
+{% include gallery id="connection0" caption="Hardware Configuration for FishTail v3_753" %}
 
 
 - Make sure your software configuration of the probe matches your hardware connection then power up the target, which should also power the probe. The software configuration I used is shown.
