@@ -20,7 +20,27 @@ requirements:
     image_path: /assets/images/FishTail_Usage_Requirements2.jpg
     alt: "requirements - fishtail probe"
     # title: "FishTail Probe"
+    
+fishtail3:
+  - url: /assets/images/FishTail_v3.753_Bottom.jpg
+    image_path: /assets/FishTail_v3.753_Bottom.jpg
+    alt: "requirements -  fishtail_v3.753"
+    title: "FishTailv3.753"
+  - url: /assets/images/FishTail_v3.753_Top.jpg
+    image_path: /assets/FishTail_v3.753_Top.jpg
+    alt: "requirements -  fishtail_v3.753"
+    title: "FishTailv3.753"
 
+connection0:
+  - url: /assets/images/FishTail_v3.753_Connection.jpg
+    image_path: /assets/FishTail_v3.753_Connection.jpg
+    alt: "hardware connection"
+    title: "STM32401 Mini Connection"
+  - url: /assets/images/FishTail_v3.753_Pinout.jpg
+    image_path: /assets/FishTail_v3.753_Pinout.jpg
+    alt: "hardware connection"
+    title: "FishTail v3.753 Pinout"
+    
 connection:
   - url: /assets/images/FishTail_Usage_Connection.jpg
     image_path: /assets/images/FishTail_Usage_Connection.jpg
@@ -77,7 +97,7 @@ Before getting our hands dirty, there are a few key terms we need to get out of 
 - **Host** - the device on which the debugger is running
 - **Target** - the device on which the program being debugged is running
 - **Debug probe/adapter** - special hardware that allows you to control and monitor a program running on a target device.
-- **Debugger** - a program running on a host computer that coordinates the debugging of a program running on the target machine by running the target program under controlled conditions and allowing the programmer to monitor changes in computer resources. We use gdb.
+- **Debug translator** - a program running on a host computer that coordinates the debugging of a program running on the target machine by running the target program under controlled conditions and allowing the programmer to monitor changes in computer resources. We use gdb.
 
 ## Requirements
 
@@ -87,6 +107,19 @@ Before getting our hands dirty, there are a few key terms we need to get out of 
 2. An ARM target dev board - I am using an [STM32F401 Mini](https://stm32-base.org/boards/STM32F401CCU6-STM32-Mini-F401)
 3. Power supply
   - You can use USB for this if your dev board features a USB port
+
+
+{% capture notice-0 %}
+
+<h4>Edit - 27/03/2022:</h4>
+
+FishTail Probe v3.753 is out! Better Hardware, good old functionality
+
+{% include gallery id="fishtail3" caption="Use FishTail_v3.753 instead." %}
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-0 | markdownify }}</div>
 
 ## Software
 ### Installing the Debugger
@@ -106,6 +139,9 @@ sudo apt-get install gcc-arm-none-eabi gdb-multiarch -y
 - The tail of the probe is designed for direct connection to the dev board debug header as shown below. The actual connection scheme you use will depend on the target debug pinout.
 
 {% include gallery id="connection" caption="Hardware Configuration" %}
+
+{% include gallery id="connection0" caption="Hardware Configuration for FishTail v3.753" %}
+
 
 - Make sure your software configuration of the probe matches your hardware connection then power up the target, which should also power the probe. The software configuration I used is shown.
 {% include gallery id="connection1" caption="Probe Software Configuration" %}
